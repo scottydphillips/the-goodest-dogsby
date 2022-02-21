@@ -23,7 +23,7 @@ export function Container() {
 		<section>
 			<h2>🐶 🐕 🐶 🐕 🐶</h2>
 			<div>
-				<img src={image} alt='A picture of a dog'/>
+				<img src={image} alt='A good dog'/>
 			</div>
 			<div>
 				<button onClick={() => fetchImage()}>
