@@ -26,7 +26,7 @@ export function Container() {
 				<p style={{ textAlign: 'center', fontSize: '1.2rem' }}>Isn't that a cute little doggo?</p>
 			</div>
 			<div>
-				<button style={{ backgroundColor: 'blueviolet', color: "white", borderRadius: "5%", fontSize: '1rem' }} onClick={() => fetchImage()}>
+				<button style={{ backgroundColor: 'blueviolet', color: "white", borderRadius: "5% 5%", fontSize: '1rem' }} onClick={() => fetchImage()}>
 					<label>Show me another good boy</label>
 				</button>	
 			</div>
