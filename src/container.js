@@ -22,10 +22,10 @@ export function Container() {
 		<section>
 			<h2>🐶 🐕 🐶 🐕 🐶</h2>
 			<div>
-				<img src={image} alt='A good dog'/>
+				<img src={image} alt='A good dog' style={{ height: '350px '}}/>
 				<p style={{ textAlign: 'center', fontSize: '1.2rem' }}>Isn't that a cute little doggo?</p>
 			</div>
-			<div>
+			<div style={{}}>
 				<button style={{ backgroundColor: 'blueviolet', color: "white", borderRadius: "5% 5%", fontSize: '1rem' }} onClick={() => fetchImage()}>
 					<label>Show me another good boy</label>
 				</button>	
