@@ -7,6 +7,7 @@ export function Container() {
 
 	const fetchImage = async () => {
 		const res = await fetch('https://dog.ceo/api/breeds/image/random')
+		if (res.status !== 200) throw new Error ('Error retrieving picture')
 		const imageJson = await res.json()
 		setImage(imageJson.message);
 	}
