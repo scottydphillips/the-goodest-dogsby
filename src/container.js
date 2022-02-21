@@ -7,9 +7,8 @@ export function Container() {
 
 	const fetchImage = async () => {
 		const res = await fetch('https://dog.ceo/api/breeds/image/random')
-		const imageBlob = await res.blob()
-		const imageObjectUrl = await blobutil.createObjectURL(imageBlob);
-		setImage(imageObjectUrl);
+		const imageJson = await res.json()
+		setImage(imageJson.message);
 	}
 
 	useEffect(() => {
@@ -24,9 +23,10 @@ export function Container() {
 			<h2>🐶 🐕 🐶 🐕 🐶</h2>
 			<div>
 				<img src={image} alt='A good dog'/>
+				<p style={{ textAlign: 'center', fontSize: '1.2rem' }}>Isn't that a cute little doggo?</p>
 			</div>
 			<div>
-				<button onClick={() => fetchImage()}>
+				<button style={{ backgroundColor: 'blueviolet', color: "white", borderRadius: "5%", fontSize: '1rem' }} onClick={() => fetchImage()}>
 					<label>Show me another good boy</label>
 				</button>	
 			</div>
