@@ -8,11 +8,8 @@ export function Container() {
 	const fetchImage = async () => {
 		const res = await fetch('https://dog.ceo/api/breeds/image/random')
 		const imageBlob = await res.blob()
-		console.log('imageBlob', imageBlob)
 		const imageObjectUrl = await blobutil.createObjectURL(imageBlob);
-		console.log('imageUrl', imageObjectUrl)
 		setImage(imageObjectUrl);
-		console.log('image', image)
 	}
 
 	useEffect(() => {
